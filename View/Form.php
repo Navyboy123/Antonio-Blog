@@ -1,6 +1,7 @@
 <?php
-require_once (__DIR__."/../model/Config.php");
+require_once (__DIR__."/../model/config.php");
 ?>
+
 <h1>Create Blog Post </h1>
 
 <form method="post" action="<?php echo $path . "Controller/Create-Post.php";?>">
@@ -17,5 +18,7 @@ require_once (__DIR__."/../model/Config.php");
         <button type="submit">Submit</button>
     </div>
 </form>
+
+
 
 

@@ -1,14 +1,14 @@
 <?php
-require_once ("../model/Config.php");
+require_once ("/../model/config.php");
 
-$connection =new mysqli($host,$username,$password);
+$connection = new mysqli($host,$username,$password);
 
 if($connection->connect_error) {
     die("Error: " . $connection->connect_error);
     
 }
 
-    $exsists= $connection->select-db();
+    $exsists= $connection->select_db($database);
     
     if ($exsists){
         $query= $connection->query("CREATE DATABASE $database");
