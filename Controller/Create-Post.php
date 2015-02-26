@@ -8,14 +8,14 @@
     $salt = "$5$" . "rounds=500$" . uniqid(mt_rand(), true) . "$";
     
     $hashedPassword = crypt($password, $salt);
-    
+    //helps to ensure that the password and username are not rpeated by another user//
     $query = $_SESSION["connection"]->query("INSERT INTO users SET "
             . "email = '$email',"
             . "username = '$username',"
             . "password = '$hashedPassword',"
             . "salt = '$salt'");
     
-    
+    //if the user name is not correct then an error will occur//
     if($query) {
         echo "Successsfully created user: $username";
     }
